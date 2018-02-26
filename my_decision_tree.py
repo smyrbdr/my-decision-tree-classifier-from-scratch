@@ -12,7 +12,7 @@ def entropy(a_dict):
         s -= pi * np.log2(pi)
     return s
 
-#information gain of a dicitonary wrt a target feature
+#information gain of a dictionary wrt a target feature
 def infogain(df, parts, target): 
     dict0 = dict(df[target].value_counts())
     dict1 = dict(parts[0][target].value_counts())
@@ -22,7 +22,7 @@ def infogain(df, parts, target):
     s2 = entropy(dict2)
     return s0-s1*sum(dict1.values())/sum(dict0.values())-s2*sum(dict2.values())/sum(dict0.values())
 
-# Best value to split a feature wrt a target feature
+# Best value to split the df feature wrt a target feature
 def best_value_to_split(df, feature, target):    
     d = {}
     count = 0
