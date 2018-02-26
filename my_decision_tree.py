@@ -71,3 +71,10 @@ def build_tree(df, target):
         print (feature, v1, ent2, samples2, value2)   
     else:
         return build_tree(part2, target)
+ 
+# a toy example
+df = pd.DataFrame({'Age':  [17,64,18,20,38,49,55,25,29,31,33], 
+                      'Salary': [25,80,22,36,37,59,74,70,33,102,88], 
+             'Loan Default': [1,0,1,0,1,0,0,1,1,0,1]})
+
+build_tree(df, "Loan Default")
